@@ -1,0 +1,15 @@
+
+
+.hoverEffect {
+    background: #000;
+  
+   background-size: cover;
+   background-position: top;
+   transition: ease-in-out 4s;
+}
+.hoverEffect:hover {
+  background-position: bottom;
+}
+/* .mealMasterImg{
+    background-image: url(../../assets/WebImages/meal-master-007.web.app.jpeg);
+} */

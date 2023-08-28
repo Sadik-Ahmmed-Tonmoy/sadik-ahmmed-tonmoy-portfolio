@@ -1,6 +1,8 @@
 import About from "../About/About";
+import Contact from "../Contact/Contact";
 import HomeTitle from "../HomeTitle/HomeTitle";
 import Portfolio from "../Portfolio/Portfolio";
+import Pricing from "../Pricing/Pricing";
 import Resume from "../Resume/Resume";
 import Services from "../Services/Services";
 import Skills from "../Skills/Skills";
@@ -18,6 +20,8 @@ const Home = () => {
             <Services/>
             <Skills/>
             <Portfolio/>
+            <Pricing/>
+            <Contact/>
         </div>
     );
 };
