@@ -8,17 +8,20 @@ import "react-vertical-timeline-component/style.min.css";
 import { BsCodeSlash } from "react-icons/bs";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Slide } from "react-awesome-reveal";
 AOS.init()
 
 const Resume = () => {
   return (
     <div id="resume">
-      <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-4 md:ms-28 mb-5 md:mb-10">
+    <Slide>
+    <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-4 md:ms-28 mb-5 md:mb-10">
         <MdOutlineBusinessCenter style={{ fontSize: "1.44rem" }} />{" "}
         <span className="ms-2">RESUME</span>
       </h5>
+    </Slide>
       <div className="md:w-9/12 mx-auto">
-        <h3 className="text-3xl md:text-6xl"><span className="text-green-400">Education</span> <span className="text-white">&</span> <span className="text-blue-400">Experience</span></h3>
+        <h3 data-aos="zoom-in-up" data-aos-duration="2000" className="text-3xl md:text-6xl"><span className="text-green-400">Education</span> <span className="text-white">&</span> <span className="text-blue-400">Experience</span></h3>
 
         <VerticalTimeline>
       <div data-aos="fade-up-right">    <VerticalTimelineElement

@@ -1,12 +1,4 @@
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import {
   AiOutlineHome,

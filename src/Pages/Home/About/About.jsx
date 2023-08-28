@@ -1,18 +1,21 @@
+import { Slide } from "react-awesome-reveal";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <div id="about" className="my-4 md:my-28">
+      <Slide>
       <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-4 md:ms-28 mb-5 md:mb-10">
         <BsFillPersonLinesFill style={{ fontSize: "1.44rem" }} />{" "}
         <span className="ms-2">ABOUT</span>
       </h5>
+      </Slide>
       <div className="md:w-9/12 mx-auto">
-        <h3 className="text-3xl md:text-6xl">
+        <h3 data-aos="zoom-out-up" data-aos-duration="2000" className="text-3xl md:text-6xl">
           Every great design begin with an <br /> even better story
         </h3>
-        <p className="mt-10 ">
+        <p data-aos="zoom-out-down" data-aos-duration="2000" className="mt-10 ">
           👋 Hey there! I'm Sadik Ahmmed Tonmoy, a dedicated MERN developer fueled by
           the excitement of turning ideas into functional web experiences. 🚀
           With 9 month's of experience in web development, the MERN stack has
