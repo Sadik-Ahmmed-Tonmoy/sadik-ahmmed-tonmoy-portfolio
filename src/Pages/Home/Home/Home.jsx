@@ -13,7 +13,7 @@ AOS.init();
 
 const Home = () => {
     return (
-        <div className="mt-5 md:mt-20 container ">
+        <div className="mt-5 md:mt-20 container overflow-hidden">
             <HomeTitle/>
             <About/>
             <Resume/>

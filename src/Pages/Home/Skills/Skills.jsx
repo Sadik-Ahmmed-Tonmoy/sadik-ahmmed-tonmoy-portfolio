@@ -13,9 +13,9 @@ import firebaseLogo from "../../../assets/Image/png-clipart-firebase-cloud-messa
 
 const Skills = () => {
   return (
-    <div id="skills">
+    <div id="skills" className="mt-10">
       <Slide>
-        <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-4 md:ms-28 mb-5 md:mb-10">
+        <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-2 md:ms-28 mb-5 md:mb-10">
           <BsCodeSlash style={{ fontSize: "1.44rem" }} />{" "}
           <span className="ms-2">SKILLS</span>
         </h5>

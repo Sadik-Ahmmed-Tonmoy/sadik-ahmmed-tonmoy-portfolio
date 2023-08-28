@@ -13,9 +13,9 @@ AOS.init()
 
 const Resume = () => {
   return (
-    <div id="resume">
+    <div id="resume" className="p-3">
     <Slide>
-    <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-4 md:ms-28 mb-5 md:mb-10">
+    <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-2 md:ms-28 mb-5 md:mb-10">
         <MdOutlineBusinessCenter style={{ fontSize: "1.44rem" }} />{" "}
         <span className="ms-2">RESUME</span>
       </h5>

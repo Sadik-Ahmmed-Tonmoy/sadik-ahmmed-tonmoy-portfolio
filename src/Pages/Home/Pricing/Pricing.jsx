@@ -4,9 +4,9 @@ import { Link } from "react-scroll";
 
 const Pricing = () => {
   return (
-    <div id="pricing">
+    <div id="pricing" className="p-2 mt-12 md:mt-14">
       <Slide>
-        <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-4 md:ms-28 mb-5 md:mb-10">
+        <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-2 md:ms-28 mb-5 md:mb-10">
           <MdOutlineAttachMoney style={{ fontSize: "1.44rem" }} />{" "}
           <span className="ms-2">PRICING</span>
         </h5>
@@ -83,7 +83,7 @@ const Pricing = () => {
             </div>
           </div>
         </section>
-        <p className="mt-16 ms-4">
+        <p className="mt-8 ms-4">
           Don't find any package match with your plan! Want to setup a new
           tailor-made package for only you?.{" "}
           <Link

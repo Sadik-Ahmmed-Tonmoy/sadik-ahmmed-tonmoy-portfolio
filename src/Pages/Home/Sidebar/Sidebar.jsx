@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div className="w-3/12 my-auto">
       <div className="navbar">
-        <div className="navbar-start absolute top-0 md:sticky md:top-28">
+        <div className="navbar-start absolute top-4 md:sticky md:top-28">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
@@ -33,114 +33,115 @@ const Sidebar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-1 z-[1] p-2 shadow rounded-box w-44"
             >
-               <ul className="menu bg-base-200 rounded-box">
-              <li>
-                <Link
-                  activeClass="active"
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <AiOutlineHome style={{ fontSize: "2rem" }} /> Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="active"
-                  to="about"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <BsFillPersonLinesFill style={{ fontSize: "2rem" }} /> About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="active"
-                  to="resume"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <MdOutlineBusinessCenter style={{ fontSize: "2rem" }} /> Resume
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="active"
-                  to="services"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <VscVmConnect style={{ fontSize: "2rem" }} /> Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="active"
-                  to="skills"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <BsCodeSlash style={{ fontSize: "2rem" }} /> Skills
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="active"
-                  to="portfolio"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <AiOutlineDatabase style={{ fontSize: "2rem" }} /> Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="active"
-                  to="pricing"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <MdOutlineAttachMoney style={{ fontSize: "2rem" }} /> Price
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="active"
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <AiOutlineMail style={{ fontSize: "2rem" }} /> Contact
-                </Link>
-              </li>
-            </ul>
+              <ul className="menu bg-slate-950 rounded-box">
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    <AiOutlineHome style={{ fontSize: "2rem" }} /> Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    <BsFillPersonLinesFill style={{ fontSize: "2rem" }} /> About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="resume"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    <MdOutlineBusinessCenter style={{ fontSize: "2rem" }} />{" "}
+                    Resume
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    <VscVmConnect style={{ fontSize: "2rem" }} /> Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="skills"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    <BsCodeSlash style={{ fontSize: "2rem" }} /> Skills
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    <AiOutlineDatabase style={{ fontSize: "2rem" }} /> Portfolio
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="pricing"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    <MdOutlineAttachMoney style={{ fontSize: "2rem" }} /> Price
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    <AiOutlineMail style={{ fontSize: "2rem" }} /> Contact
+                  </Link>
+                </li>
+              </ul>
             </ul>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex fixed top-56 mx-20">
           {/* pc */}
           <ul className="menu menu-horizontal px-1">
-            <ul className="menu bg-base-200 rounded-box">
-              <li data-tooltip-id="home">
+            <ul className="menu bg-slate-950 rounded-box">
+              <li data-tooltip-id="home" >
                 <Link
                   activeClass="active"
                   to="home"
@@ -148,6 +149,7 @@ const Sidebar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
+                  className="hover:text-green-500" 
                 >
                   <AiOutlineHome style={{ fontSize: "2rem" }} />
                 </Link>
@@ -160,6 +162,7 @@ const Sidebar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
+                  className="hover:text-green-500" 
                 >
                   <BsFillPersonLinesFill style={{ fontSize: "2rem" }} />
                 </Link>
@@ -172,6 +175,7 @@ const Sidebar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
+                  className="hover:text-green-500" 
                 >
                   <MdOutlineBusinessCenter style={{ fontSize: "2rem" }} />
                 </Link>
@@ -184,6 +188,7 @@ const Sidebar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
+                  className="hover:text-green-500" 
                 >
                   <VscVmConnect style={{ fontSize: "2rem" }} />
                 </Link>
@@ -196,6 +201,7 @@ const Sidebar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
+                  className="hover:text-green-500" 
                 >
                   <BsCodeSlash style={{ fontSize: "2rem" }} />
                 </Link>
@@ -208,6 +214,7 @@ const Sidebar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
+                  className="hover:text-green-500" 
                 >
                   <AiOutlineDatabase style={{ fontSize: "2rem" }} />
                 </Link>
@@ -220,6 +227,7 @@ const Sidebar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
+                  className="hover:text-green-500" 
                 >
                   <MdOutlineAttachMoney style={{ fontSize: "2rem" }} />
                 </Link>
@@ -232,6 +240,7 @@ const Sidebar = () => {
                   smooth={true}
                   offset={50}
                   duration={500}
+                  className="hover:text-green-500" 
                 >
                   <AiOutlineMail style={{ fontSize: "2rem" }} />
                 </Link>

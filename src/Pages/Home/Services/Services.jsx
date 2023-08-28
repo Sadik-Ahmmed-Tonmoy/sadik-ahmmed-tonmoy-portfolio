@@ -10,7 +10,7 @@ import securityLottie from "../../../assets/Lotties/animation_llujmaeh.json";
 
 const Services = () => {
   return (
-    <div id="services" className="my-24">
+    <div id="services" className="mt-14 md:my-24">
       <Slide>
         <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-4 md:ms-28 mb-5 md:mb-10">
           <VscVmConnect style={{ fontSize: "1.44rem" }} />{" "}

@@ -8,9 +8,9 @@ AOS.init();
 
 const Portfolio = () => {
   return (
-    <div id="portfolio">
+    <div id="portfolio" className="p-2 mt-8 md:mt-14">
       <Slide>
-        <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-4 md:ms-28 mb-5 md:mb-10">
+        <h5 className="border flex rounded-3xl py-2 px-5 w-min ms-2 md:ms-28 mb-5 md:mb-10">
           <AiOutlineDatabase style={{ fontSize: "1.44rem" }} />{" "}
           <span className="ms-2">PORTFOLIO</span>
         </h5>

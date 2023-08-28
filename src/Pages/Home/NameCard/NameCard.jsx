@@ -50,7 +50,7 @@ const NameCard = () => {
           </Link>
          <Link to="https://github.com/Sadik-Ahmmed-Tonmoy">
          <button className="btn btn-circle hover:border-red-800 mx-2">
-          <VscGithub className="rounded hover:text-white" style={{ fontSize: '2.5rem' }}/>
+          <VscGithub className="rounded hover:text-black" style={{ fontSize: '2.5rem' }}/>
           </button>
           </Link>
        <Link to="https://www.facebook.com/sadikahmedtonmoy/">

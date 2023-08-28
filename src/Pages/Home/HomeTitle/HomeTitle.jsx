@@ -29,12 +29,12 @@ const HomeTitle = () => {
             <span className=" text-green-500">And</span>
             <br /> <span>The digital universe"</span>
           </h3>
-          <p className="mt-6 md:ms-10 mx-2 opacity-20">
+          <p className="mt-6 md:ms-10 mx-2 opacity-30">
             I design and code beautifully simple things and i love what i do.
           </p>
          </div>
 
-          <div className="stats shadow mt-14 flex  flex-col md:flex-row">
+          <div className="stats shadow bg-slate-900 mt-5 md:mt-14 flex flex-col md:flex-row">
             <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1500" className="stat">
               <div className="stat-value text-green-500">
                 {" "}
@@ -53,7 +53,7 @@ const HomeTitle = () => {
                 </svg>
                 <CountUp duration={4} end={9} />+
               </div>
-              <div className="stat-title">MONTH'S OF EXPERIENCE</div>
+              <div className="stat-title text-white">MONTH'S OF EXPERIENCE</div>
             </div>
             <div data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1500"  className="stat">
               <div className="stat-value text-green-500">
@@ -72,7 +72,7 @@ const HomeTitle = () => {
                 </svg>
                 <CountUp duration={5} end={10} />+
               </div>
-              <div className="stat-title">LIVE PROJECTS</div>
+              <div className="stat-title text-white">LIVE PROJECTS</div>
             </div>
           </div>
         </div>
