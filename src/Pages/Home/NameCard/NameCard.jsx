@@ -1,15 +1,15 @@
-
 import { AiOutlineFacebook, AiOutlineLinkedin } from "react-icons/ai";
 import { VscVmConnect, VscGithub } from "react-icons/vsc";
 import Typewriter from "typewriter-effect";
 
 import DP from "../../../assets/Image/DP.jpg";
 import { Link } from "react-router-dom";
+import ScrollButton from "../../../Components/scrollButton/scrollButton";
 
 const NameCard = () => {
   return (
     <>
-      <div className="border rounded-bl-2xl rounded-tr-2xl md:w-4/12 text-center md:ms-6 m-2 h-min md:sticky top-20 ">
+      <div id="nameCard" className="border rounded-bl-2xl rounded-tr-2xl md:w-4/12 text-center md:ms-6 m-2 h-min md:sticky top-20 ">
         <div className="text-center">
           <h3 className="text-3xl font-bold mt-6 mb-2">Sadik Ahmmed</h3>
           <span className="font-semibold ">
@@ -43,24 +43,36 @@ const NameCard = () => {
 
         {/* socials */}
         <section className="flex justify-center mb-3">
-         <Link to="https://www.linkedin.com/in/sadikahmmedtonmoy/">
-         <button className="btn btn-square hover:border-red-800 mx-2">
-          <AiOutlineLinkedin className="rounded hover:text-blue-600" style={{ fontSize: '3rem' }}/>
-          </button>
+          <Link to="https://www.linkedin.com/in/sadikahmmedtonmoy/">
+            <button className="btn btn-square hover:border-red-800 mx-2">
+              <AiOutlineLinkedin
+                className="rounded hover:text-blue-600"
+                style={{ fontSize: "3rem" }}
+              />
+            </button>
           </Link>
-         <Link to="https://github.com/Sadik-Ahmmed-Tonmoy">
-         <button className="btn btn-circle hover:border-red-800 mx-2">
-          <VscGithub className="rounded hover:text-black" style={{ fontSize: '2.5rem' }}/>
-          </button>
+          <Link to="https://github.com/Sadik-Ahmmed-Tonmoy">
+            <button className="btn btn-circle hover:border-red-800 mx-2">
+              <VscGithub
+                className="rounded hover:text-black hover:bg-white hover:rounded-full"
+                style={{ fontSize: "2.5rem" }}
+              />
+            </button>
           </Link>
-       <Link to="https://www.facebook.com/sadikahmedtonmoy/">
-       <button className="btn btn-square hover:border-red-800 mx-2">
-          <AiOutlineFacebook className="rounded hover:text-blue-600" style={{ fontSize: '3rem' }}/>
-          </button> 
-          </Link> 
+          <Link to="https://www.facebook.com/sadikahmedtonmoy/">
+            <button className="btn btn-square hover:border-red-800 mx-2">
+              <AiOutlineFacebook
+                className="rounded hover:text-blue-600"
+                style={{ fontSize: "3rem" }}
+              />
+            </button>
+          </Link>
         </section>
-
-        <button className="btn btn-outline w-11/12 rounded-3xl mb-10 text-green-500 hover:text-black hover:font-extrabold hover:bg-gradient-to-r from-cyan-400 via-green-300 to-green-900 m-2"><VscVmConnect style={{fontSize: "1.5rem"}}/>HIRE ME</button>
+       <ScrollButton to="contact" name={  <button className="btn btn-outline w-11/12 rounded-3xl mb-10 text-green-500 hover:text-black hover:font-extrabold hover:bg-gradient-to-r from-cyan-400 via-green-300 to-green-900 m-2">
+          <VscVmConnect style={{ fontSize: "1.5rem" }} />
+          HIRE ME
+        </button>}/>
+      
       </div>
     </>
   );

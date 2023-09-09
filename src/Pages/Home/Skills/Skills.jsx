@@ -5,11 +5,11 @@ import "aos/dist/aos.css";
 AOS.init();
 import ImageWithTitle from "../../../Components/ImageWithTitle/ImageWithTitle";
 import figmaLogo from "../../../assets/Image/logo-app-figma.webp";
-import reactLogo from "../../../assets/Image/React-icon.svg.png";
+import reactLogo from "../../../assets/Image/React-icon.svg-removebg-preview.png";
 import mongoDBLogo from "../../../assets/Image/mongodb-svgrepo-com.svg";
 import nodeLogo from "../../../assets/Image/png-clipart-node-js-javascript-express-js-npm-react-github-angle-text-removebg-preview (1).png";
 import expressLogo from "../../../assets/Image/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo-removebg-preview.png";
-import firebaseLogo from "../../../assets/Image/png-clipart-firebase-cloud-messaging-google-developers-software-development-kit-google-angle-triangle-thumbnail-removebg-preview (1).png";
+import firebaseLogo from "../../../assets/Image/firebase.png";
 
 const Skills = () => {
   return (
@@ -49,7 +49,7 @@ const Skills = () => {
           <div data-aos="fade-down" data-aos-duration="3000">
             <ImageWithTitle
               image={reactLogo}
-              title={"React"}
+              title={"React Js"}
               percentage={"90"}
             />
           </div>

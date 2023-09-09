@@ -4,6 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ProjectsShowOff from "../../../Components/ProjectsShowOff/ProjectsShowOff";
 import mealMasterImg from "../../../assets/WebImages/meal-master-007.web.app.jpeg";
+import vapeCafeImg from "../../../assets/WebImages/VapeCafeImage.jpeg";
+import toyfinityImg from "../../../assets/WebImages/toyfinity.jpeg";
 AOS.init();
 
 const Portfolio = () => {
@@ -26,15 +28,15 @@ const Portfolio = () => {
         </h3>
         <section>
          
-          <div className="md:grid md:grid-cols-2 gap-4">
-           <div data-aos="fade-right">
+          <div className="md:flex flex-wrap gap-">
+           <div data-aos="fade-right" data-aos-duration="2000" className="mx-auto">
            <ProjectsShowOff
-              img={mealMasterImg}
-              name={"Meal Master"}
-              link={"https://meal-master-007.web.app/"}
+              img={vapeCafeImg}
+              name={"Vape Cafe"}
+              link={"https://vape-cafe-007.web.app/"}
             />
            </div>
-           <div data-aos="fade-left">
+           <div data-aos="fade-left" data-aos-duration="2000" className="mx-auto">
            <ProjectsShowOff
               img={mealMasterImg}
               name={"Meal Master"}
@@ -42,11 +44,11 @@ const Portfolio = () => {
             />
            </div>
           </div>
-          <div data-aos="fade-up" className="md:flex justify-center">
+          <div data-aos="fade-up" data-aos-duration="1000" className="md:flex justify-center">
          <ProjectsShowOff
-            img={mealMasterImg}
-            name={"Meal Master"}
-            link={"https://meal-master-007.web.app/"}
+            img={toyfinityImg}
+            name={"Toyfinity"}
+            link={"https://toyfinity-f87b3.web.app/"}
           />
          </div>
         </section>

@@ -7,15 +7,15 @@ import {
 } from "react-icons/ai";
 import { BsFillPersonLinesFill, BsCodeSlash } from "react-icons/bs";
 import { VscVmConnect } from "react-icons/vsc";
-import { MdOutlineBusinessCenter, MdOutlineAttachMoney } from "react-icons/md";
+import { MdOutlineBusinessCenter, MdDriveFileRenameOutline, MdOutlineAttachMoney } from "react-icons/md";
 
 const Sidebar = () => {
   return (
     <div className="w-3/12 my-auto">
       <div className="navbar">
-        <div className="navbar-start absolute top-4 md:sticky md:top-28">
+        <div className="navbar-start fixed top-4 md:sticky md:top-28">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label tabIndex={0} className="btn btn-ghost md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -39,9 +39,21 @@ const Sidebar = () => {
                 <li>
                   <Link
                     activeClass="active"
+                    to="nameCard"
+                    spy={true}
+                    smooth='easeInOutQuint'
+                    offset={50}
+                    duration={500}
+                  >
+                    <MdDriveFileRenameOutline style={{ fontSize: "2rem" }} /> Name
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
                     to="home"
                     spy={true}
-                    smooth={true}
+                    smooth='easeInOutQuint'
                     offset={50}
                     duration={500}
                   >
@@ -109,7 +121,7 @@ const Sidebar = () => {
                     <AiOutlineDatabase style={{ fontSize: "2rem" }} /> Portfolio
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     activeClass="active"
                     to="pricing"
@@ -120,7 +132,7 @@ const Sidebar = () => {
                   >
                     <MdOutlineAttachMoney style={{ fontSize: "2rem" }} /> Price
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     activeClass="active"
@@ -137,7 +149,7 @@ const Sidebar = () => {
             </ul>
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex fixed top-56 mx-20">
+        <div className="navbar-center hidden md:flex fixed top-56 mx-20">
           {/* pc */}
           <ul className="menu menu-horizontal px-1">
             <ul className="menu bg-slate-950 rounded-box">
@@ -146,9 +158,9 @@ const Sidebar = () => {
                   activeClass="active"
                   to="home"
                   spy={true}
-                  smooth={true}
+                  smooth='easeInOutQuart'
                   offset={50}
-                  duration={500}
+                  duration={2000}
                   className="hover:text-green-500" 
                 >
                   <AiOutlineHome style={{ fontSize: "2rem" }} />
@@ -159,9 +171,9 @@ const Sidebar = () => {
                   activeClass="active"
                   to="about"
                   spy={true}
-                  smooth={true}
+                  smooth='easeInOutQuart'
                   offset={50}
-                  duration={500}
+                  duration={2000}
                   className="hover:text-green-500" 
                 >
                   <BsFillPersonLinesFill style={{ fontSize: "2rem" }} />
@@ -172,9 +184,9 @@ const Sidebar = () => {
                   activeClass="active"
                   to="resume"
                   spy={true}
-                  smooth={true}
+                  smooth='easeInOutQuart'
                   offset={50}
-                  duration={500}
+                  duration={2000}
                   className="hover:text-green-500" 
                 >
                   <MdOutlineBusinessCenter style={{ fontSize: "2rem" }} />
@@ -185,9 +197,9 @@ const Sidebar = () => {
                   activeClass="active"
                   to="services"
                   spy={true}
-                  smooth={true}
+                  smooth='easeInOutQuart'
                   offset={50}
-                  duration={500}
+                  duration={2000}
                   className="hover:text-green-500" 
                 >
                   <VscVmConnect style={{ fontSize: "2rem" }} />
@@ -198,9 +210,9 @@ const Sidebar = () => {
                   activeClass="active"
                   to="skills"
                   spy={true}
-                  smooth={true}
+                  smooth='easeInOutQuart'
                   offset={50}
-                  duration={500}
+                  duration={2000}
                   className="hover:text-green-500" 
                 >
                   <BsCodeSlash style={{ fontSize: "2rem" }} />
@@ -211,15 +223,15 @@ const Sidebar = () => {
                   activeClass="active"
                   to="portfolio"
                   spy={true}
-                  smooth={true}
+                  smooth='easeInOutQuart'
                   offset={50}
-                  duration={500}
+                  duration={2000}
                   className="hover:text-green-500" 
                 >
                   <AiOutlineDatabase style={{ fontSize: "2rem" }} />
                 </Link>
               </li>
-              <li data-tooltip-id="price">
+              {/* <li data-tooltip-id="price">
                 <Link
                   activeClass="active"
                   to="pricing"
@@ -231,15 +243,15 @@ const Sidebar = () => {
                 >
                   <MdOutlineAttachMoney style={{ fontSize: "2rem" }} />
                 </Link>
-              </li>
+              </li> */}
               <li data-tooltip-id="contact">
                 <Link
                   activeClass="active"
                   to="contact"
                   spy={true}
-                  smooth={true}
+                  smooth='easeInOutQuart'
                   offset={50}
-                  duration={500}
+                  duration={2000}
                   className="hover:text-green-500" 
                 >
                   <AiOutlineMail style={{ fontSize: "2rem" }} />

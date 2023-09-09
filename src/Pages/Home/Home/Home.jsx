@@ -1,3 +1,4 @@
+import { ScrollRestoration } from "react-router-dom";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import HomeTitle from "../HomeTitle/HomeTitle";
@@ -13,15 +14,16 @@ AOS.init();
 
 const Home = () => {
     return (
-        <div className="mt-5 md:mt-20 container overflow-hidden">
+        <div className="mt-5 md:mt-20 container mx-auto overflow-hidden">
             <HomeTitle/>
             <About/>
             <Resume/>
             <Services/>
             <Skills/>
             <Portfolio/>
-            <Pricing/>
+            {/* <Pricing/> */}
             <Contact/>
+            <ScrollRestoration/>
         </div>
     );
 };

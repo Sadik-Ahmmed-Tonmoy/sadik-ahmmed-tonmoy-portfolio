@@ -3,8 +3,8 @@ import './ProjectsShowOff.css'
 
 const ProjectsShowOff = ({img, link, name}) => {
     return (
-        <div className='my-6'>
-            <div className='hoverEffect border rounded-xl h-96 md:w-96' style={{ backgroundImage: `url('${img}')` }}>
+        <div className='my-6 mx-1 md:w-80'>
+            <div className='hoverEffect border rounded-xl h-96' style={{ backgroundImage: `url('${img}')` }}>
             <p className='hover:opacity-0 rounded-xl h-full w-full flex justify-center items-center text-4xl font-extrabold backdrop-blur-sm underline decoration-sky-500 text-white'>
           Hover me
         </p>
