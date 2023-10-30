@@ -34,7 +34,7 @@ const HomeTitle = () => {
           </p>
          </div>
 
-          <div className="stats shadow bg-slate-900 mt-5 md:mt-14 flex flex-col md:flex-row">
+          <div className="stats shadow bg-slate-900 mt-5 md:mt-14 flex flex-col md:flex-row mx-2">
             <div data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1500" className="stat">
               <div className="stat-value text-green-500">
                 {" "}

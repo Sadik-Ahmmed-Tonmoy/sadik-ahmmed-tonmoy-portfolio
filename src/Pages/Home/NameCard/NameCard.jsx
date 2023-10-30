@@ -8,8 +8,8 @@ import ScrollButton from "../../../Components/scrollButton/scrollButton";
 
 const NameCard = () => {
   return (
-    <>
-      <div id="nameCard" className="border rounded-bl-2xl rounded-tr-2xl md:w-4/12 text-center md:ms-6 m-2 h-min md:sticky top-20 ">
+    <div className="md:h-screen md:sticky top-0 left-0 md:w-4/12 flex items-center">
+      <div id="nameCard" className="border rounded-bl-2xl rounded-tr-2xl  text-center md:ms-6 m-2 h-min ">
         <div className="text-center">
           <h3 className="text-3xl font-bold mt-6 mb-2">Sadik Ahmmed</h3>
           <span className="font-semibold ">
@@ -36,7 +36,7 @@ const NameCard = () => {
           alt=""
         />
         <div className="my-6 mx-4">
-          <p className="font-semibold text-lg">Sadikahmmed258@gmail.com</p>
+          <p className="font-semibold text-sm lg:text-lg">Sadikahmmed258@gmail.com</p>
           <p className="mb-2">Dhaka, Bangladesh</p>
           <p className="text-xs">© Sadik. All Right Reserved</p>
         </div>
@@ -74,7 +74,7 @@ const NameCard = () => {
         </button>}/>
       
       </div>
-    </>
+    </div>
   );
 };
 
