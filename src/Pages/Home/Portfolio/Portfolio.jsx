@@ -4,6 +4,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ProjectsShowOff from "../../../Components/ProjectsShowOff/ProjectsShowOff";
 import mealMasterImg from "../../../assets/WebImages/meal-master-007.web.app.jpeg";
+import perfectoImg from "../../../assets/WebImages/perfecto.jpeg";
+import anghoragImage from "../../../assets/WebImages/Screenshot_20-4-2024_221455_anghorag.vercel.app.jpeg";
+import coffeeTimeImg from "../../../assets/WebImages/coffeeTime.jpeg";
 import vapeCafeImg from "../../../assets/WebImages/VapeCafeImage.jpeg";
 import toyfinityImg from "../../../assets/WebImages/toyfinity.jpeg";
 AOS.init();
@@ -31,6 +34,24 @@ const Portfolio = () => {
           <div className="md:flex flex-wrap gap-">
            <div data-aos="fade-right" data-aos-duration="2000" className="mx-auto">
            <ProjectsShowOff
+           hoverMeClassName={"text-black"}
+            img={perfectoImg}
+            name={"Perfecto"}
+            link={"https://ecom-perfecto.vercel.app/"}
+          />
+           </div>
+           <div data-aos="fade-left" data-aos-duration="2000" className="mx-auto">
+           <ProjectsShowOff
+           hoverMeClassName={"text-black"}
+              img={"https://i.ibb.co/V2cDGfZ/anghorag.jpg"}
+              name={"Anghorag"}
+              link={"https://anghorag.vercel.app/"}
+            />
+           </div>
+          </div>
+          <div className="md:flex flex-wrap gap-">
+           <div data-aos="fade-right" data-aos-duration="2000" className="mx-auto">
+           <ProjectsShowOff
               img={vapeCafeImg}
               name={"Vape Cafe"}
               link={"https://vape-cafe-007.web.app/"}
@@ -38,19 +59,20 @@ const Portfolio = () => {
            </div>
            <div data-aos="fade-left" data-aos-duration="2000" className="mx-auto">
            <ProjectsShowOff
-              img={mealMasterImg}
-              name={"Meal Master"}
-              link={"https://meal-master-007.web.app/"}
+           hoverMeClassName={"text-black"}
+              img={coffeeTimeImg}
+              name={"Coffee Time"}
+              link={"https://coffee-time-007.web.app/"}
             />
            </div>
           </div>
-          <div data-aos="fade-up" data-aos-duration="1000" className="md:flex justify-center">
+          {/* <div data-aos="fade-up" data-aos-duration="1000" className="md:flex justify-center">
          <ProjectsShowOff
-            img={toyfinityImg}
-            name={"Toyfinity"}
-            link={"https://toyfinity-f87b3.web.app/"}
+            img={perfeectoImg}
+            name={"Perfecto"}
+            link={"https://ecom-perfecto.vercel.app/"}
           />
-         </div>
+         </div> */}
         </section>
       </div>
     </div>
