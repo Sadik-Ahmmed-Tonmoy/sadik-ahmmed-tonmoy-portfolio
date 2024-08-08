@@ -37,7 +37,8 @@ const Portfolio = () => {
            hoverMeClassName={"text-black"}
             img={perfectoImg}
             name={"Perfecto"}
-            link={"https://ecom-perfecto.vercel.app/"}
+            // link={"https://ecom-perfecto.vercel.app/"}
+            link={"https://perfecto-two.vercel.app/"}
           />
            </div>
            <div data-aos="fade-left" data-aos-duration="2000" className="mx-auto">

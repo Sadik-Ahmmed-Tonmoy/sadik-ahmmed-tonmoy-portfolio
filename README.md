@@ -13,3 +13,7 @@ npm install -g firebase-tools
 firebase login
 npm run build
 firebase deploy
+
+
+UPDATE RESUME DOWNLOAD option
+UPDATE ALL LINKS FROM PORTFOLIO

@@ -47,10 +47,10 @@ const Contact = () => {
           data-aos-duration="1500"
           className="text-3xl md:text-6xl ms-2 mb-8"
         >
-          Let's Work <span className="text-green-500">Together!</span>
+          Let's Work <span className="text-green-500">Together!</span>   
         </h3>
         <section>
-        <Slide><p className="ms-4 text-xl font-bold">sadikahmmed258@gmail.com</p></Slide>
+        <Slide><p className="ms-4 text-xl font-bold">workwithsadik@gmail.com</p></Slide>
 
           <form ref={form} onSubmit={sendEmail} className="card-body">
             <div className="md:grid md:grid-cols-2 gap-10">
@@ -92,16 +92,16 @@ const Contact = () => {
               </div>
               <div data-aos="fade-left" data-aos-duration="2000" className="form-control">
                 <label className="label">
-                  <span className="label-text text-white">YOUR BUDGET</span>
+                  <span className="label-text text-white">YOUR PURPOSE</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Not mandatory"
+                  placeholder="Your Purpose"
                   name="budget"
                   className="input input-bordered border-white border-t-0 border-s-0 border-e-0 bg-slate-950 "
                 />
               </div>
-              <div data-aos="fade-up" data-aos-duration="3000" className="form-control">
+              <div data-aos="fade-up" data-aos-duration="3000" className="form-control col-span-2">
                 <label className="label">
                   <span className="label-text text-white">MESSAGE</span>
                 </label>
