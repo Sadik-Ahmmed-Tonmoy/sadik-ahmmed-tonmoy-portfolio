@@ -12,9 +12,9 @@ const Main = () => {
       <div className="overlay fixed top-0 z-10 w-full h-full"></div>
       <video src={bgVideo} autoPlay loop muted></video>
       <div className="absolute top-0 z-20 w-full">
-        <div className="md:flex relative">
+        <div className="lg:flex relative">
           <NameCard />
-          <div className="md:w-auto">
+          <div className="lg:w-auto">
             <Outlet />
           </div>
           <Sidebar />

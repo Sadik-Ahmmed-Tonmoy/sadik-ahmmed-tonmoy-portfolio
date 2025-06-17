@@ -1,4 +1,5 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import {
   AiOutlineHome,
@@ -10,301 +11,115 @@ import { VscVmConnect } from "react-icons/vsc";
 import {
   MdOutlineBusinessCenter,
   MdDriveFileRenameOutline,
-  MdOutlineAttachMoney,
 } from "react-icons/md";
+import { FaBars } from "react-icons/fa";
 
 const Sidebar = () => {
-  return (
-    <div className="md:w-3/12 md:h-screen sticky top-0 flex items-center">
-      <div className="w-3/12 my-auto">
-        <div className="navbar">
-          <div className="navbar-start fixed top-4 md:sticky md:top-28">
-            <div className="dropdown">
-              <label tabIndex={0} className="btn btn-ghost md:hidden ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </label>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-1 z-[1] p-2 shadow rounded-box w-44"
-              >
-                <ul className="menu bg-slate-950 rounded-box">
-                  <li>
-                    <Link
-                      activeClass="active"
-                      to="nameCard"
-                      spy={true}
-                      smooth="easeInOutQuint"
-                      offset={50}
-                      duration={500}
-                    >
-                      <MdDriveFileRenameOutline style={{ fontSize: "2rem" }} />{" "}
-                      Name
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      activeClass="active"
-                      to="home"
-                      spy={true}
-                      smooth="easeInOutQuint"
-                      offset={50}
-                      duration={500}
-                    >
-                      <AiOutlineHome style={{ fontSize: "2rem" }} /> Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      activeClass="active"
-                      to="about"
-                      spy={true}
-                      smooth={true}
-                      offset={50}
-                      duration={500}
-                    >
-                      <BsFillPersonLinesFill style={{ fontSize: "2rem" }} />{" "}
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      activeClass="active"
-                      to="resume"
-                      spy={true}
-                      smooth={true}
-                      offset={50}
-                      duration={500}
-                    >
-                      <MdOutlineBusinessCenter style={{ fontSize: "2rem" }} />{" "}
-                      Resume
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      activeClass="active"
-                      to="services"
-                      spy={true}
-                      smooth={true}
-                      offset={50}
-                      duration={500}
-                    >
-                      <VscVmConnect style={{ fontSize: "2rem" }} /> Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      activeClass="active"
-                      to="skills"
-                      spy={true}
-                      smooth={true}
-                      offset={50}
-                      duration={500}
-                    >
-                      <BsCodeSlash style={{ fontSize: "2rem" }} /> Skills
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      activeClass="active"
-                      to="portfolio"
-                      spy={true}
-                      smooth={true}
-                      offset={50}
-                      duration={500}
-                    >
-                      <AiOutlineDatabase style={{ fontSize: "2rem" }} />{" "}
-                      Portfolio
-                    </Link>
-                  </li>
-                  {/* <li>
-                  <Link
-                    activeClass="active"
-                    to="pricing"
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                  >
-                    <MdOutlineAttachMoney style={{ fontSize: "2rem" }} /> Price
-                  </Link>
-                </li> */}
-                  <li>
-                    <Link
-                      activeClass="active"
-                      to="contact"
-                      spy={true}
-                      smooth={true}
-                      offset={50}
-                      duration={500}
-                    >
-                      <AiOutlineMail style={{ fontSize: "2rem" }} /> Contact
-                    </Link>
-                  </li>
-                </ul>
-              </ul>
-            </div>
-          </div>
-          {/* pc */}
-          <div className="hidden md:block mx-20">
-            <ul className="menu menu-horizontal px-1">
-              <ul className="menu bg-slate-950 rounded-box">
-                <li data-tooltip-id="home">
-                  <Link
-                    activeClass="active"
-                    to="home"
-                    spy={true}
-                    smooth="easeInOutQuart"
-                    offset={50}
-                    duration={2000}
-                    className="hover:text-green-500"
-                  >
-                    <AiOutlineHome style={{ fontSize: "2rem" }} />
-                  </Link>
-                </li>
-                <li data-tooltip-id="about">
-                  <Link
-                    activeClass="active"
-                    to="about"
-                    spy={true}
-                    smooth="easeInOutQuart"
-                    offset={50}
-                    duration={2000}
-                    className="hover:text-green-500"
-                  >
-                    <BsFillPersonLinesFill style={{ fontSize: "2rem" }} />
-                  </Link>
-                </li>
-                <li data-tooltip-id="resume">
-                  <Link
-                    activeClass="active"
-                    to="resume"
-                    spy={true}
-                    smooth="easeInOutQuart"
-                    offset={50}
-                    duration={2000}
-                    className="hover:text-green-500"
-                  >
-                    <MdOutlineBusinessCenter style={{ fontSize: "2rem" }} />
-                  </Link>
-                </li>
-                <li data-tooltip-id="services">
-                  <Link
-                    activeClass="active"
-                    to="services"
-                    spy={true}
-                    smooth="easeInOutQuart"
-                    offset={50}
-                    duration={2000}
-                    className="hover:text-green-500"
-                  >
-                    <VscVmConnect style={{ fontSize: "2rem" }} />
-                  </Link>
-                </li>
-                <li data-tooltip-id="skills">
-                  <Link
-                    activeClass="active"
-                    to="skills"
-                    spy={true}
-                    smooth="easeInOutQuart"
-                    offset={50}
-                    duration={2000}
-                    className="hover:text-green-500"
-                  >
-                    <BsCodeSlash style={{ fontSize: "2rem" }} />
-                  </Link>
-                </li>
-                <li data-tooltip-id="portfolio">
-                  <Link
-                    activeClass="active"
-                    to="portfolio"
-                    spy={true}
-                    smooth="easeInOutQuart"
-                    offset={50}
-                    duration={2000}
-                    className="hover:text-green-500"
-                  >
-                    <AiOutlineDatabase style={{ fontSize: "2rem" }} />
-                  </Link>
-                </li>
-                {/* <li data-tooltip-id="price">
-                <Link
-                  activeClass="active"
-                  to="pricing"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="hover:text-green-500" 
-                >
-                  <MdOutlineAttachMoney style={{ fontSize: "2rem" }} />
-                </Link>
-              </li> */}
-                <li data-tooltip-id="contact">
-                  <Link
-                    activeClass="active"
-                    to="contact"
-                    spy={true}
-                    smooth="easeInOutQuart"
-                    offset={50}
-                    duration={2000}
-                    className="hover:text-green-500"
-                  >
-                    <AiOutlineMail style={{ fontSize: "2rem" }} />
-                  </Link>
-                </li>
-              </ul>
-            </ul>
-          </div>
-        </div>
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  };
 
-        <ReactTooltip id="home" place="left" variant="info" content="Home" />
-        <ReactTooltip id="about" place="left" variant="info" content="About" />
-        <ReactTooltip
-          id="resume"
-          place="left"
-          variant="info"
-          content="Resume"
-        />
-        <ReactTooltip
-          id="services"
-          place="left"
-          variant="info"
-          content="Services"
-        />
-        <ReactTooltip
-          id="skills"
-          place="left"
-          variant="info"
-          content="Skills"
-        />
-        <ReactTooltip
-          id="portfolio"
-          place="left"
-          variant="info"
-          content="Portfolio"
-        />
-        <ReactTooltip id="price" place="left" variant="info" content="Price" />
-        <ReactTooltip
-          id="contact"
-          place="left"
-          variant="info"
-          content="Contact"
-        />
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+    hover: {
+      scale: 1.1,
+      color: "#10b981",
+      transition: { duration: 0.2 },
+    },
+  };
+
+  const navItems = [
+    { id: "home", icon: <AiOutlineHome />, tooltip: "Home" },
+    { id: "about", icon: <BsFillPersonLinesFill />, tooltip: "About" },
+    { id: "resume", icon: <MdOutlineBusinessCenter />, tooltip: "Resume" },
+    { id: "services", icon: <VscVmConnect />, tooltip: "Services" },
+    { id: "skills", icon: <BsCodeSlash />, tooltip: "Skills" },
+    { id: "portfolio", icon: <AiOutlineDatabase />, tooltip: "Portfolio" },
+    { id: "contact", icon: <AiOutlineMail />, tooltip: "Contact" },
+  ];
+
+  return (
+    <motion.div
+      className="lg:w-1/12  lg:h-screen sticky top-0 right-0 flex items-center justify-end"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      {/* Mobile Menu Button */}
+      <div className="lg:hidden fixed top-4 right-4 z-40">
+        <motion.label
+          htmlFor="sidebar-toggle"
+          className="btn btn-ghost p-2"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          {/* <FaBars className="text-xl text-emerald-400" /> */}
+        </motion.label>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      <input type="checkbox" id="sidebar-toggle" className="peer hidden" />
+      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-30 transition-opacity opacity-0 peer-checked:opacity-100 pointer-events-none peer-checked:pointer-events-auto md:hidden"></div>
+      
+      <motion.div
+        className="w-16 h-auto bg-slate-900/50 backdrop-blur-sm border border-emerald-500/30 rounded-l-xl p-4 shadow-2xl flex flex-col items-center gap-6 mr-0 md:mr- transform translate-x-full peer-checked:translate-x-0 md:translate-x-0 transition-transform duration-300 z-30"
+        layout
+      >
+        {/* Desktop Navigation */}
+        <motion.ul
+          className="menu flex flex-col gap-6 "
+          variants={containerVariants}
+        >
+          {navItems.map((item) => (
+            <motion.li
+              key={item.id}
+              variants={itemVariants}
+              whileHover="hover"
+              data-tooltip-id={item.id}
+              className="tooltip-left" // Custom class for tooltip positioning
+            >
+              <Link
+                activeClass="active"
+                to={item.id}
+                spy={true}
+                smooth="easeInOutQuart"
+                offset={-50}
+                duration={800}
+                className="flex items-center justify-center p-3 rounded-full bg-slate-800/50 hover:bg-slate-800/70 border border-slate-700/50 hover:border-emerald-500/50 text-slate-300 hover:text-emerald-400 transition-all"
+              >
+                <span className="text-xl">{item.icon}</span>
+              </Link>
+              <ReactTooltip
+                id={item.id}
+                place="left"
+                effect="solid"
+                className="!bg-slate-800 !text-emerald-400 !border !border-emerald-500/30 !rounded-lg !py-1 !px-2"
+              >
+                {item.tooltip}
+              </ReactTooltip>
+            </motion.li>
+          ))}
+        </motion.ul>
+      </motion.div>
+    </motion.div>
   );
 };
 

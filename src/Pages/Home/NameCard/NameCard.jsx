@@ -1,79 +1,212 @@
-import { AiOutlineFacebook, AiOutlineLinkedin } from "react-icons/ai";
-import { VscVmConnect, VscGithub } from "react-icons/vsc";
-import Typewriter from "typewriter-effect";
-
-import DP from "../../../assets/Image/DP.jpg";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaFacebook, FaRegUser } from "react-icons/fa";
+import { MdEmail, MdLocationOn } from "react-icons/md";
+import { BsCodeSlash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import ScrollButton from "../../../Components/scrollButton/scrollButton";
+import DP from "../../../assets/Image/DP.jpg";
 
 const NameCard = () => {
-  return (
-    <div className="md:h-screen md:sticky top-0 left-0 md:w-4/12 flex items-center">
-      <div id="nameCard" className="border rounded-bl-2xl rounded-tr-2xl  text-center md:ms-6 m-2 h-min ">
-        <div className="text-center">
-          <h3 className="text-3xl font-bold mt-6 mb-2">Sadik Ahmmed</h3>
-          <span className="font-semibold ">
-            <Typewriter
-              options={{
-                strings: [
-                  "(WEB DEVELOPER)",
-                  "(FULL STACK DEVELOPER)",
-                  "(MERN STACK DEVELOPER)",
-                  "(REACT DEVELOPER)",
-                  "(FRONT-END DEVELOPER)",
-                ],
-                autoStart: true,
-                pauseFor: 1400,
-                loop: true,
-                delay: 85,
-              }}
-            />
-          </span>
-        </div>
-        <img
-          className="w-10/12 mx-auto rounded-bl-xl rounded-tr-2xl mt-4"
-          src={DP}
-          alt=""
-        />
-        <div className="my-6 mx-4">
-          <p className="font-semibold text-sm lg:text-lg">Sadikahmmed258@gmail.com</p>
-          <p className="mb-2">Dhaka, Bangladesh</p>
-          <p className="text-xs">© Sadik. All Right Reserved</p>
-        </div>
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
 
-        {/* socials */}
-        <section className="flex justify-center mb-3">
-          <Link to="https://www.linkedin.com/in/sadikahmmedtonmoy/">
-            <button className="btn btn-square hover:border-red-800 mx-2">
-              <AiOutlineLinkedin
-                className="rounded hover:text-blue-600"
-                style={{ fontSize: "3rem" }}
-              />
-            </button>
-          </Link>
-          <Link to="https://github.com/Sadik-Ahmmed-Tonmoy">
-            <button className="btn btn-circle hover:border-red-800 mx-2">
-              <VscGithub
-                className="rounded hover:text-black hover:bg-white hover:rounded-full"
-                style={{ fontSize: "2.5rem" }}
-              />
-            </button>
-          </Link>
-          <Link to="https://www.facebook.com/sadikahmedtonmoy/">
-            <button className="btn btn-square hover:border-red-800 mx-2">
-              <AiOutlineFacebook
-                className="rounded hover:text-blue-600"
-                style={{ fontSize: "3rem" }}
-              />
-            </button>
-          </Link>
-        </section>
-       <ScrollButton to="contact" name={  <button className="btn btn-outline w-11/12 rounded-3xl mb-10 text-green-500 hover:text-black hover:font-extrabold hover:bg-gradient-to-r from-cyan-400 via-green-300 to-green-900 m-2">
-          <VscVmConnect style={{ fontSize: "1.5rem" }} />
-          HIRE ME
-        </button>}/>
-      
-      </div>
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [0, -10, 0],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const roles = [
+    "Full Stack Developer",
+    "MERN Stack Specialist",
+    "React Developer",
+    "JavaScript Engineer",
+    "Frontend Architect"
+  ];
+
+  return (
+    <div className="lg:h-screen lg:sticky top-0 left-0 lg:w-4/12 xl:w-3/12 flex items-center p-4">
+      <motion.div
+        id="nameCard"
+        className="w-full bg-slate-900/50 backdrop-blur-sm border border-emerald-500/30 rounded-2xl p-8 shadow-2xl overflow-hidden"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Decorative elements */}
+        <motion.div
+          className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/10 rounded-full filter blur-xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.2, 0.1]
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            repeatType: "reverse"
+          }}
+        />
+
+        {/* Profile Image */}
+        <motion.div
+          variants={itemVariants}
+          className="flex justify-center mb-6"
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-emerald-500/30"
+          >
+            <img
+              className="w-full h-full object-cover"
+              src={DP}
+              alt="Sadik Ahmmed"
+            />
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 opacity-0 hover:opacity-100 transition-opacity duration-300"
+              whileHover={{ opacity: 1 }}
+            />
+          </motion.div>
+        </motion.div>
+
+        {/* Name and Title */}
+        <motion.div variants={itemVariants} className="text-center mb-6">
+          <h3 className="text-3xl font-bold text-white mb-2">Sadik Ahmmed</h3>
+          <div className="text-emerald-400 font-mono text-lg h-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="flex justify-center items-center gap-2"
+            >
+              <BsCodeSlash />
+              <span className="text-sm md:text-base">
+                {roles[0]}
+              </span>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Contact Info */}
+        <motion.div variants={itemVariants} className="space-y-4 mb-8">
+          <div className="flex items-center gap-3">
+            <motion.div
+              variants={floatingVariants}
+              animate="animate"
+              className="bg-gradient-to-r from-emerald-500 to-cyan-500 p-2 rounded-full text-white"
+            >
+              <MdEmail className="text-xl" />
+            </motion.div>
+            <div>
+              <p className="text-slate-400 text-sm">Email</p>
+              <a
+                href="mailto:Sadikahmmed258@gmail.com"
+                className="text-white hover:text-emerald-400 transition-colors"
+              >
+                Sadikahmmed258@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <motion.div
+              variants={floatingVariants}
+              animate="animate"
+              style={{ animationDelay: "0.5s" }}
+              className="bg-gradient-to-r from-blue-500 to-purple-500 p-2 rounded-full text-white"
+            >
+              <MdLocationOn className="text-xl" />
+            </motion.div>
+            <div>
+              <p className="text-slate-400 text-sm">Location</p>
+              <p className="text-white">Dhaka, Bangladesh</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Social Links */}
+        <motion.div variants={itemVariants} className="flex justify-center gap-4 mb-8">
+          <motion.a
+            href="https://www.linkedin.com/in/sadikahmmedtonmoy/"
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{ y: -5 }}
+            className="bg-slate-800/50 hover:bg-slate-800/70 border border-slate-700/50 hover:border-blue-500/50 p-3 rounded-full text-white transition-all"
+          >
+            <FaLinkedin className="text-xl" />
+          </motion.a>
+
+          <motion.a
+            href="https://github.com/Sadik-Ahmmed-Tonmoy"
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{ y: -5 }}
+            className="bg-slate-800/50 hover:bg-slate-800/70 border border-slate-700/50 hover:border-gray-500/50 p-3 rounded-full text-white transition-all"
+          >
+            <FaGithub className="text-xl" />
+          </motion.a>
+
+          <motion.a
+            href="https://www.facebook.com/sadikahmedtonmoy/"
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{ y: -5 }}
+            className="bg-slate-800/50 hover:bg-slate-800/70 border border-slate-700/50 hover:border-blue-600/50 p-3 rounded-full text-white transition-all"
+          >
+            <FaFacebook className="text-xl" />
+          </motion.a>
+        </motion.div>
+
+        {/* Hire Me Button */}
+        <motion.div variants={itemVariants}>
+          <ScrollButton to="contact">
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="w-full bg-gradient-to-r from-emerald-500 to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <FaRegUser className="text-lg" />
+              <span>HIRE ME</span>
+            </motion.button>
+          </ScrollButton>
+        </motion.div>
+
+        {/* Footer */}
+        <motion.div
+          variants={itemVariants}
+          className="mt-6 pt-4 border-t border-emerald-500/20 text-center"
+        >
+          <p className="text-xs text-slate-500">
+            © {new Date().getFullYear()} Sadik Ahmmed. All Rights Reserved
+          </p>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
