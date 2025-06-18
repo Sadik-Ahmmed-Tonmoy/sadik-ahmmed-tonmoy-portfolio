@@ -5,6 +5,7 @@ import { BsCodeSlash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import ScrollButton from "../../../Components/scrollButton/scrollButton";
 import DP from "../../../assets/Image/DP.jpg";
+import Typewriter from "typewriter-effect";
 
 const NameCard = () => {
   // Animation variants
@@ -48,7 +49,7 @@ const NameCard = () => {
     "MERN Stack Specialist",
     "React Developer",
     "JavaScript Engineer",
-    "Frontend Architect"
+    "Frontend Architect",
   ];
 
   return (
@@ -65,12 +66,12 @@ const NameCard = () => {
           className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/10 rounded-full filter blur-xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.2, 0.1]
+            opacity: [0.1, 0.2, 0.1],
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
-            repeatType: "reverse"
+            repeatType: "reverse",
           }}
         />
 
@@ -97,7 +98,9 @@ const NameCard = () => {
 
         {/* Name and Title */}
         <motion.div variants={itemVariants} className="text-center mb-6">
-          <h3 className="text-3xl font-bold text-white mb-2">Sadik Ahmmed</h3>
+          <h3 className="text-3xl font-bold text-white mb-2">
+            Sadik Ahmmed Tonmoy
+          </h3>
           <div className="text-emerald-400 font-mono text-lg h-8">
             <motion.div
               initial={{ opacity: 0 }}
@@ -106,8 +109,25 @@ const NameCard = () => {
               className="flex justify-center items-center gap-2"
             >
               <BsCodeSlash />
-              <span className="text-sm md:text-base">
-                {roles[0]}
+              {/* <span className="text-sm md:text-base">{roles[0]}</span> */}
+              <span className="font-semibold text-sm md:text-base">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "(WEB DEVELOPER)",
+                      "(FULL STACK DEVELOPER)",
+                      "(MERN STACK DEVELOPER)",
+                      "(REACT DEVELOPER)",
+                      "(NEXT-JS DEVELOPER)",
+                      "(FRONT-END DEVELOPER)",
+                      "(PRISMA DEVELOPER)",
+                    ],
+                    autoStart: true,
+                    pauseFor: 1400,
+                    loop: true,
+                    delay: 85,
+                  }}
+                />
               </span>
             </motion.div>
           </div>
@@ -117,7 +137,7 @@ const NameCard = () => {
         <motion.div variants={itemVariants} className="space-y-4 mb-8">
           <div className="flex items-center gap-3">
             <motion.div
-              variants={floatingVariants}
+              // variants={floatingVariants}
               animate="animate"
               className="bg-gradient-to-r from-emerald-500 to-cyan-500 p-2 rounded-full text-white"
             >
@@ -126,17 +146,17 @@ const NameCard = () => {
             <div>
               <p className="text-slate-400 text-sm">Email</p>
               <a
-                href="mailto:Sadikahmmed258@gmail.com"
+                href="mailto:workwithsadik@gmail.com"
                 className="text-white hover:text-emerald-400 transition-colors"
               >
-                Sadikahmmed258@gmail.com
+                workwithsadik@gmail.com
               </a>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <motion.div
-              variants={floatingVariants}
+              // variants={floatingVariants}
               animate="animate"
               style={{ animationDelay: "0.5s" }}
               className="bg-gradient-to-r from-blue-500 to-purple-500 p-2 rounded-full text-white"
@@ -145,13 +165,16 @@ const NameCard = () => {
             </motion.div>
             <div>
               <p className="text-slate-400 text-sm">Location</p>
-              <p className="text-white">Dhaka, Bangladesh</p>
+              <p className="text-white">Khilgaon, Dhaka, Bangladesh</p>
             </div>
           </div>
         </motion.div>
 
         {/* Social Links */}
-        <motion.div variants={itemVariants} className="flex justify-center gap-4 mb-8">
+        <motion.div
+          variants={itemVariants}
+          className="flex justify-center gap-4 mb-8"
+        >
           <motion.a
             href="https://www.linkedin.com/in/sadikahmmedtonmoy/"
             target="_blank"

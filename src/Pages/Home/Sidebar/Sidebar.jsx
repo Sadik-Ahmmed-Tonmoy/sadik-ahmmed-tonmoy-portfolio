@@ -1,18 +1,16 @@
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
-import { Tooltip as ReactTooltip } from "react-tooltip";
 import {
-  AiOutlineHome,
   AiOutlineDatabase,
+  AiOutlineHome,
   AiOutlineMail,
 } from "react-icons/ai";
-import { BsFillPersonLinesFill, BsCodeSlash } from "react-icons/bs";
-import { VscVmConnect } from "react-icons/vsc";
+import { BsCodeSlash, BsFillPersonLinesFill } from "react-icons/bs";
 import {
-  MdOutlineBusinessCenter,
-  MdDriveFileRenameOutline,
+  MdOutlineBusinessCenter
 } from "react-icons/md";
-import { FaBars } from "react-icons/fa";
+import { VscVmConnect } from "react-icons/vsc";
+import { Link } from "react-scroll";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 const Sidebar = () => {
   // Animation variants
@@ -58,7 +56,7 @@ const Sidebar = () => {
 
   return (
     <motion.div
-      className="lg:w-1/12  lg:h-screen sticky top-0 right-0 flex items-center justify-end"
+      className="hidden lg:w-1/12  lg:h-screen sticky top-0 right-0 lg:flex items-center justify-end"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
